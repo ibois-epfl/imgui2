@@ -1,3 +1,4 @@
+# TODO: add better synthax for library
 add_library(imgui STATIC
 
     imgui.cpp
