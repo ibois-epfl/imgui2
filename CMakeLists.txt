@@ -18,6 +18,7 @@ target_sources(imgui PUBLIC
       FILES ${_headers}
 )
 
+
 find_package(glfw3 REQUIRED)
 
 if(NOT DEFINED(OpenGL_GL_PREFERENCE))
@@ -26,6 +27,7 @@ endif()
 find_package(OpenGL REQUIRED)
 
 target_link_libraries(imgui PRIVATE OpenGL::GL glfw PUBLIC stb)
+
 target_include_directories(imgui
     INTERFACE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
               $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/backends>
